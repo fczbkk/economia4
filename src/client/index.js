@@ -1,14 +1,23 @@
 function init () {
-  console.log('init');
   const button_element = document.querySelector('button');
   button_element.addEventListener('click', loadList);
 }
 
 
 function loadList () {
-  console.log('loading list');
   const url = '/data';
   ajax(url, handleData);
+}
+
+
+function createPersonRow (person_data) {
+  return `
+      <tr>
+        <td>${person_data.first_name}</td>
+        <td>${person_data.last_name}</td>
+        <td>${person_data.email}</td>
+      </tr>
+    `;
 }
 
 
@@ -16,14 +25,14 @@ function handleData (data) {
   const parsed_data = JSON.parse(data);
   const target_element = document.querySelector('#content');
 
-  let content = '<table>' +
-    '<tr><th>first_name</th><th>last_name</th><th>email</th></tr>';
+  const people_list = parsed_data.people.map(createPersonRow);
 
-  parsed_data.people.forEach(function (person_data) {
-    content += '<tr><td>' + person_data.first_name + '</td><td>' + person_data.last_name + '</td><td>' + person_data.email + '</td></tr>';
-  });
-
-  content += '</table>';
+  const content = `
+    <table>
+      <tr><th>first_name</th><th>last_name</th><th>email</th></tr>
+      ${people_list.join('')}
+    </table>
+  `;
 
   target_element.innerHTML = content;
 }
