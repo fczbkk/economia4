@@ -77,6 +77,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.ajax = ajax;
+/**
+ * @module
+ */
+
+/**
+ *
+ * @param {string} url - URL of page to load.
+ * @param {Function} callback
+ */
 function ajax(url, callback) {
   var xhr = new XMLHttpRequest();
 
@@ -108,6 +117,11 @@ function loadList() {
   (0, _ajax.ajax)(url, handleData);
 }
 
+/**
+ * Creates HTML for row containing person data.
+ * @param {Object} person_data
+ * @returns {string}
+ */
 function createPersonRow(person_data) {
   return '\n      <tr>\n        <td>' + person_data.first_name + '</td>\n        <td>' + person_data.last_name + '</td>\n        <td>' + person_data.email + '</td>\n      </tr>\n    ';
 }
