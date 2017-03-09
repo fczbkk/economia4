@@ -20,6 +20,7 @@
     "prebuild": "npm run cleanup",
     "build": "webpack --config ./webpack.config.js",
     "cleanup": "rimraf ./build",
-    "version": "npm run build"
+    "version": "npm run build && git add -A",
+    "postversion": "git push && git push --tags"
   }
 }
