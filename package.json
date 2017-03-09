@@ -21,7 +21,7 @@
     "prebuild": "npm run cleanup",
     "build": "webpack --config ./webpack.config.js",
     "cleanup": "rimraf ./build",
-    "version": "npm run build && git add -A",
+    "version": "npm run build && npm run changelog && git add -A",
     "postversion": "git push && git push --tags",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   }
