@@ -8,11 +8,17 @@
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
+    "babel-loader": "^6.4.0",
     "babel-preset-latest": "^6.22.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "rimraf": "^2.6.1",
+    "webpack": "^2.2.1"
   },
   "scripts": {
+    "dev": "npm run server & npm run build -- --watch",
     "server": "nodemon ./src/server/index.js",
-    "build": "babel ./src/client -d ./build/client"
+    "prebuild": "npm run cleanup",
+    "build": "webpack --config ./webpack.config.js",
+    "cleanup": "rimraf ./build"
   }
 }

@@ -1,3 +1,6 @@
+import {ajax} from './ajax.js';
+
+
 function init () {
   const button_element = document.querySelector('button');
   button_element.addEventListener('click', loadList);
@@ -35,19 +38,6 @@ function handleData (data) {
   `;
 
   target_element.innerHTML = content;
-}
-
-
-function ajax (url, callback) {
-  const xhr = new XMLHttpRequest();
-
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-        callback(xhr.responseText);
-    }
-  };
-  xhr.open('GET', url, true);
-  xhr.send();
 }
 
 
