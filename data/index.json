@@ -1,0 +1,19 @@
+{
+  "people": [
+    {
+      "first_name": "Riki",
+      "last_name": "Fridrich",
+      "email": "riki@fczbkk.com"
+    },
+    {
+      "first_name": "Tomas",
+      "last_name": "Litera",
+      "email": "tomas@litera.me"
+    },
+    {
+      "first_name": "Tomas",
+      "last_name": "Misko",
+      "email": "tomas@jedno.sk"
+    }
+  ]
+}

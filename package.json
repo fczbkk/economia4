@@ -1,0 +1,18 @@
+{
+  "name": "statistics-dashboard",
+  "version": "1.0.0",
+  "description": "Dashboard for displaying statistics.",
+  "dependencies": {
+    "express": "^4.15.2",
+    "pug": "^2.0.0-beta11"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-latest": "^6.22.0",
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "server": "nodemon ./src/server/index.js",
+    "build": "babel ./src/client -d ./build/client"
+  }
+}
