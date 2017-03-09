@@ -19,6 +19,7 @@
     "server": "nodemon ./src/server/index.js",
     "prebuild": "npm run cleanup",
     "build": "webpack --config ./webpack.config.js",
-    "cleanup": "rimraf ./build"
+    "cleanup": "rimraf ./build",
+    "version": "npm run build"
   }
 }
