@@ -13,6 +13,11 @@ function loadList () {
 }
 
 
+/**
+ * Creates HTML for row containing person data.
+ * @param {Object} person_data
+ * @returns {string}
+ */
 function createPersonRow (person_data) {
   return `
       <tr>

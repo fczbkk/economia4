@@ -1,3 +1,12 @@
+/**
+ * @module
+ */
+
+/**
+ *
+ * @param {string} url - URL of page to load.
+ * @param {Function} callback
+ */
 export function ajax (url, callback) {
   const xhr = new XMLHttpRequest();
 
