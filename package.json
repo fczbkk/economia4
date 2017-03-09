@@ -1,6 +1,6 @@
 {
   "name": "statistics-dashboard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dashboard for displaying statistics.",
   "dependencies": {
     "express": "^4.15.2",
